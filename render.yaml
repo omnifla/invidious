@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: invidious
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: POSTGRES_DB
+        value: db_on5h
+      - key: POSTGRES_USER
+        value: omni
+      - key: POSTGRES_PASSWORD
+        value: voJ4NMpXhS8e37uzX6cJf19ETShFVIaR
+      - key: POSTGRES_HOST
+        value: dpg-d0667f2li9vc73e1phqg-a
+      - key: POSTGRES_PORT
+        value: 5432
+      - key: INVIDIOUS_CONFIG
+        value: |
+          db:
+            dbname: db_on5h
+            user: omni
+            password: voJ4NMpXhS8e37uzX6cJf19ETShFVIaR
+            host: dpg-d0667f2li9vc73e1phqg-a
+            port: 5432
+          check_tables: true
+          domain: your-invidious.onrender.com
+          https_only: false
