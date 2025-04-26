@@ -3,7 +3,7 @@ services:
     name: invidious
     env: docker
     plan: free
-    dockerfilePath: ./Dockerfile
+    dockerfilePath: ./docker/Dockerfile
     envVars:
       - key: POSTGRES_DB
         value: db_on5h
